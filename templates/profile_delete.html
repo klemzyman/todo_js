@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>Izbriši profil?</h1>
+
+<form action="/profile/delete" method="post" class="mt-5 text-center">
+    <p>Si resnično želiš izbrisati svoj profil?</p>
+    <button type="submit" class="btn btn-danger px-5">Da</button>
+    <a href="/profile" class="btn btn-secondary px-5">Ne</a>
+</form>
+
+{% endblock content %}

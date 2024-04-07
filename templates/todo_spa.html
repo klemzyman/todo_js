@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>My ToDo List</h1>
+
+<input type="hidden" id="task-id" name="task-id" value="">
+<form action="" id="todo-form">
+    <div class="mb-3">
+        <label class="form-label" for="task">Task</label>
+        <input class="form-control" type="text" id="task" name="task" placeholder="Sample task">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="priority">Priority</label>
+        <input class="form-control" type="number" id="priority" name="priority" min="1" max="5" placeholder="3">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="due_date">Date due</label>
+        <input class="form-control" type="date" id="due_date" name="due_date" placeholder="07.04.2024">
+    </div>
+    <input type="hidden" id="completed" name="completed" value="false">
+</form>
+<button type="submit" id="form-button" class="btn btn-primary" onclick="ToDoAdd()">Add</button>
+<button type="submit" id="form-button-delete" class="btn btn-danger" onclick="ToDoDelete()" hidden="hidden">Delete</button>
+
+<br><br>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Task</th>
+        <th scope="col" style="text-align: center">Priority</th>
+        <th scope="col" style="text-align: center">Due date</th>
+        <th scope="col" style="text-align: center">Completed</th>
+        <th scope="col" style="text-align: center"></th>
+      </tr>
+    </thead>
+    <tbody id="todos">
+
+    </tbody>
+  </table>
+
+<script src="static/scripts/main.js"></script>
+{% endblock content %}

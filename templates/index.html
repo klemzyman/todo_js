@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>Ugani skrito število</h1>
+
+{% if user %}
+
+<p>Pozdravljen {{ user.name }}!</p>
+<form action="result" method="post">
+    <div class="row mt-5">
+        <div class="col-8">
+            <input class="form-control form-control-lg" type="number" name="guess" id="guess" min="1"
+                   max="{{max_secret}}">
+        </div>
+        <div class="col-4">
+            <button class="btn btn-primary btn-lg" type="submit">Ugibaj</button>
+        </div>
+    </div>
+</form>
+{% else %}
+
+<p>Aplikacija <i>Ugani skrito stevilo</i> je narejena kot vaja na tečaju WD1. Več o igri si lahko prebereš na
+    podstrani <a href="about">O strani</a>.</p>
+<p>Za igranje igre se je potrebno <a href="login">vpisati</a>.</p>
+{% endif %}
+{% endblock content %}

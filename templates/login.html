@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+    {% block content %}
+
+    <h1>Prijavi se</h1>
+    <form action="login" method="post">
+        <div class="mb-3">
+            <label class="form-label" for="user-email">Email</label>
+            <input class="form-control" type="email" id="user-email" name="user-email" placeholder="janez@example.si">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="user-email">Password</label>
+            <input class="form-control" type="password" id="user-pass" name="user-pass">
+        </div>
+        <button type="submit" class="btn btn-primary">Prijava!</button>
+    </form>
+
+    <p>Če še nimaš računa, ga lahko <a href="sign-up">ustvariš</a>.</p>
+    {% endblock content %}

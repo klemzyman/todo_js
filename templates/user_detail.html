@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>Profil uporabnika {{ user_data.name }}</h1>
+<ul class="list-group mb-3">
+    <li class="list-group-item"><strong>Uporabniško ime:</strong> {{ user_data.name }}</li>
+    <li class="list-group-item"><strong>Email:</strong> {{ user_data.email }}</li>
+</ul>
+{% endblock content %}
